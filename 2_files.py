@@ -16,7 +16,25 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+with open('referat.txt','r', encoding='utf-8') as f:
+        
+        for words in f: 
+            text = f.read()
+            f.seek(0)                       
+            words = f.read()
+            words = words.replace(".","!")
+            
+            print(f'Количество слов в тексе - ', len(words.split(' '))) # Количество слов
+        print(f'Длина строки в переменной -', len(text))  # Длина строки в переменной           
+        
+        
+
+with open('referat2.txt','w',encoding='utf-8') as t:
+    t.write(words)
+
+
+
+
 
 if __name__ == "__main__":
     main()
