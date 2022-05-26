@@ -17,15 +17,13 @@ def main():
     В ней надо заменить pass на ваш код
     """
 with open('referat.txt','r', encoding='utf-8') as f:
-        
-        for words in f: 
-            text = f.read()
-            f.seek(0)                       
-            words = f.read()
-            words = words.replace(".","!")
+    text = f.read()
+    f.seek(0)                 
+    words = f.read()
+    words = words.replace(".","!") # замена . на !
             
-            print(f'Количество слов в тексе - ', len(words.split(' '))) # Количество слов
-        print(f'Длина строки в переменной -', len(text))  # Длина строки в переменной           
+    print(f'Количество слов в тексе - ', len(words.split(' '))) # Количество слов
+    print(f'Длина строки в переменной -', len(text))  # Длина строки в переменной           
         
         
 
